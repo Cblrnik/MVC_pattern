@@ -1,15 +1,22 @@
-﻿@{ 
-    Layout = null;
+﻿@model IEnumerable<MVC1.Models.Phone>
+@{
+    ViewData["Title"] = "Каталог товаров";
 }
-<!doctype html>
-<html>
-    <head>
-        <title>Hello World!</title>
-        <meta charset= "utf-8"/>
-        <meta name= "viewport" content="width =device-width" />
-
-    </head>
-    <body>
-        <h2>Привет мир!</h2>
-    </body>
-</html>
+<h3>Смартфоны</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Модель</td>
+        <td>Производитель</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var phone in Model)
+    {
+        <tr>
+            <td>@phone.Name</td>
+            <td>@phone.Company</td>
+            <td>@phone.Price</td>
+            <td><a href="~/Home/Buy/@phone.Id">Купить</a></td>
+        </tr>
+    }
+</table>
