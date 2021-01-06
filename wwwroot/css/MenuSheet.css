@@ -1,13 +1,24 @@
-﻿.vertical-menu {
-    width: 300px;
+﻿/******************************
+
+  Отображение меню в целом
+
+*******************************/
+.vertical-menu {
+    min-width: 250px;
+    max-width: 300px;
     height: 450px;
     overflow-y: auto;
+    word-wrap: normal;
 }
+/******************************
 
+  Отображение структуры меню
+
+*******************************/
 .metro {
     list-style: none;
     padding: 0;
-    margin: 30px 0 0 50px;
+    margin: 30px 0 0 30px;
     border-left: 5px solid #DAE4F1;
 }
 
@@ -75,10 +86,33 @@
             margin-right: .1em;
         }
 
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+}
+/******************************
 
+  Отображение всплывающего меню
 
-li {
-    list-style-type: none;
+*******************************/
+.dropdown {
+    display: inline-block;
 }
 
+.dropdown-child {
+    display: none;
+    min-width: 200px;
+}
 
+    .dropdown-child a {
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.dropdown-child li:hover {
+    background-color: rgba(216, 216, 216, 0.336);
+}

@@ -1,8 +1,18 @@
-﻿.menu-content {
+﻿/******************************
+
+  Отображение текста
+
+*******************************/
+.menu-content {
     display: flex;
     justify-content: space-between;
 }
-.text-content {
+
+li {
+    list-style-type: none;
+}
+
+.text {
     width: 1250px;
     margin-right: 0;
     margin-left: 20px;
