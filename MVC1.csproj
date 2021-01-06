@@ -5,6 +5,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\301_large.png" />
+    <None Include="wwwroot\images\arror.png" />
+    <None Include="wwwroot\images\banner.png" />
+    <None Include="wwwroot\images\bannerItem.png" />
+    <None Include="wwwroot\images\cat.png" />
+    <None Include="wwwroot\images\cat1.png" />
+    <None Include="wwwroot\images\cat2.png" />
+    <None Include="wwwroot\images\cat3.png" />
+    <None Include="wwwroot\images\cat4.png" />
+    <None Include="wwwroot\images\cat5.png" />
+    <None Include="wwwroot\images\categories.png" />
+    <None Include="wwwroot\images\facebook.png" />
+    <None Include="wwwroot\images\item.png" />
+    <None Include="wwwroot\images\kart-white.png" />
+    <None Include="wwwroot\images\kart.png" />
+    <None Include="wwwroot\images\left-arror.png" />
+    <None Include="wwwroot\images\levis.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\promo1.png" />
+    <None Include="wwwroot\images\promo2.png" />
+    <None Include="wwwroot\images\promo3.png" />
+    <None Include="wwwroot\images\promo4.png" />
+    <None Include="wwwroot\images\right-arror.png" />
+    <None Include="wwwroot\images\rss.png" />
+    <None Include="wwwroot\images\twitter.png" />
+    <None Include="wwwroot\images\ZEBRA.png" />
+    <None Include="wwwroot\images\ZEBRA1.png" />
+    <None Include="wwwroot\js\index.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
   </ItemGroup>
 

@@ -25,7 +25,8 @@ namespace MVC1
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MobileContext>(options => options.UseSqlServer(connection));
-            services.AddMvc();//AddControllersWithViews
+            services.AddMvc();
+            services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -37,8 +38,8 @@ namespace MVC1
                             {
                                 endpoints.MapControllerRoute(
                                   name: "default", 
-                                  pattern: "{controller=Home}/{action=Index}/{id?}");
-                            });
+                                  pattern: "{controller=Home}/{action=FirstPage}/{id?}");
+                            }); /**/
 
         }
     }

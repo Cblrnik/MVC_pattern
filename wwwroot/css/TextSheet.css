@@ -1,0 +1,9 @@
+﻿.menu-content {
+    display: flex;
+    justify-content: space-between;
+}
+.text-content {
+    width: 1250px;
+    margin-right: 0;
+    margin-left: 20px;
+}

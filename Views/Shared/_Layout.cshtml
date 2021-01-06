@@ -4,26 +4,71 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/Index.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/TextSheet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--меню-->
-    <nav class="navbar navbar-inverse">
-        <div class="container">
+    <nav>
+        <div class="wrapper">
             <div>
-                <ul class="nav navbar-nav">
-                    <li><a href="~/Home/Index" class="navbar-brand">Главная</a></li>
-                </ul>
+                <a href="~/Home/"><img src="https://localhost:44382/images/PDD.png" alt=""></a>
+                <span class="logo">Online</span>
+            </div>
+            <div class="menu">
+                <a href="#" class="menu-item">Главная</a>
+                <a href="#" class="menu-item">ПДД</a>
+                <a href="#" class="menu-item">Тесты</a>
+                <a href="#" class="menu-item">Контакты</a>
             </div>
         </div>
     </nav>
+    <hr>
     <!--основной контент-->
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
+    <div class="menu-content">
+        <div class="vertical-menu">
+            <ul class="metro">
+                <li>
+                    <a href="">ПДД</a>
+                    <ul>
+                        <li><a href="">1. Общие положения</a></li>
+                        <li><a href="">2. Общие права и обязанности участников дорожного движения</a></li>
+                        <li><a href="">3. Права и обязанности водителей</a></li>
+                        <li><a href="">4. Права и обязанности пешеходов</a></li>
+                        <li><a href="">Элемент вложенного списка</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+                <li><a href="">Элемент списка</a></li>
+            </ul>
+        </div>
+        <div class="text-content">
+            @RenderBody()
+        </div>
+        </div>
         <footer>
-            <p>© 2015 - MobileStore</p>
+            <div class="wrapper">
+                <div class="footer-text">
+                    <img src="https://localhost:44382/images/PDD.png" alt="">
+                </div>
+                <div class="socials">
+                    <a href="#"><img src="https://localhost:44382/images/facebook.png" alt=""></a>
+                    <a href="#"><img src="https://localhost:44382/images/twitter.png" alt=""></a>
+                    <a href="#"><img src="https://localhost:44382/images/rss.png" alt=""></a>
+                </div>
+            </div>
         </footer>
-    </div>
 </body>
 </html>

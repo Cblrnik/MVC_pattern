@@ -16,6 +16,8 @@ namespace MVC1.Controllers
         {
             return View(db.Phones.ToList());
         }
+        public IActionResult FirstPage() { return View(); }
+        public IActionResult Zebra1() { return View(); }
         [HttpGet]
         public IActionResult Buy(int? id)
         {

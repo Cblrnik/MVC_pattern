@@ -9,7 +9,6 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.dll
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.pdb
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\appsettings.json
-D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.exe
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.deps.json
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.runtimeconfig.json
@@ -70,3 +69,6 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.csproj.CoreCompileInputs.cache
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Buy.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\scopedcss\bundle\MVC1.styles.css
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Zebra1.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\FirstPage.cshtml.g.cs
