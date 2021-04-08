@@ -34,13 +34,20 @@ namespace MVC1
             app.UseRouting();
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
                             {
                                 endpoints.MapControllerRoute(
-                                  name: "default", 
-                                  pattern: "{controller=Home}/{action=FirstPage}/{id?}");
+                                  name: "default",
+                                  pattern: "{controller=Home}/{action=StartPage}/{id?}");
+                                //endpoints.MapControllerRoute(
+                                //  name: "Viewable",
+                                //  pattern: "{controller=View}/{action=Index}/{id?}");
                             }); /**/
-
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("404 | Page is not Found");
+            });
         }
     }
 }

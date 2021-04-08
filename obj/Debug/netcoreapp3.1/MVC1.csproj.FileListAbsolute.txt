@@ -17,7 +17,6 @@ D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.dll
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.pdb
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.Views.dll
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\MVC1.Views.pdb
-D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.RazorTargetAssemblyInfo.cache
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.RazorTargetAssemblyInfo.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.Views.pdb
@@ -25,7 +24,6 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\staticwebassets\MVC1.StaticWebAssets
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\staticwebassets\MVC1.StaticWebAssets.xml
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.genruntimeconfig.cache
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.csproj.CopyComplete
-D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.csprojAssemblyReference.cache
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -70,4 +68,16 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.MvcApplicationPartsAssemblyInfo
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Buy.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\scopedcss\bundle\MVC1.styles.css
-D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\FirstPage.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\StartPage.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Index.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page1.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page2.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page3.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page4.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page5.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page6.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page7.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page8.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.csprojAssemblyReference.cache
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Test.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TestLayout.cshtml.g.cs

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/MainSheet.css" />
+    <link rel="stylesheet" href="~/css/MenuSheet.css" />
+    <link rel="stylesheet" href="~/css/TextSheet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--меню-->
+    <nav>
+        <div class="wrapper">
+            <div>
+                <a href="~/Home/StartPage"><img src="https://localhost:44382/images/PDD.png" alt=""></a>
+                <span class="logo">Online</span>
+            </div>
+            <div class="menu">
+                <a href="~/Home/StartPage" class="menu-item">Главная</a>
+                <a href="~/View/Page1" class="menu-item">ПДД</a>
+                <a href="#" class="menu-item">Тесты</a>
+                <a href="#" class="menu-item">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="menu-content">
+        <div class="text">
+            @RenderBody()
+        </div>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="footer-text">
+                <img src="https://localhost:44382/images/PDD.png" alt="">
+            </div>
+            <div class="socials">
+                <a href="#"><img src="https://localhost:44382/images/facebook.png" alt=""></a>
+                <a href="#"><img src="https://localhost:44382/images/twitter.png" alt=""></a>
+                <a href="#"><img src="https://localhost:44382/images/rss.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

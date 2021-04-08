@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+    display: block;
+}
+
 a {
     text-decoration: none;
     outline: none;
@@ -66,15 +71,12 @@ nav {
 }
 
 footer {
-    margin-top: 70px;
-    padding: 25px 0;
+    display: flex;
+    margin-top: 105px;
+    padding: 25px 10px;
     background: #1b2330;
+    justify-content: space-between;
 }
-
-    footer .wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
 
 .copy {
     margin-top: 15px;
