@@ -59,7 +59,79 @@ namespace MVC1.Controllers
         {
             return View();
         }
+        public IActionResult Page13()
+        {
+            return View();
+        }
+        public IActionResult Page14()
+        {
+            return View();
+        }
+        public IActionResult Page15()
+        {
+            return View();
+        }
+        public IActionResult Page16()
+        {
+            return View();
+        }
+        public IActionResult Page17()
+        {
+            return View();
+        }
+        public IActionResult Page18()
+        {
+            return View();
+        }
+        public IActionResult Page19()
+        {
+            return View();
+        }
+        public IActionResult Page20()
+        {
+            return View();
+        }
+        public IActionResult Page21()
+        {
+            return View();
+        }
+        public IActionResult Page22()
+        {
+            return View();
+        }
+        public IActionResult Page23()
+        {
+            return View();
+        }
+        public IActionResult Page24()
+        {
+            return View();
+        }
+        public IActionResult Page25()
+        {
+            return View();
+        }
+        public IActionResult Page26()
+        {
+            return View();
+        }
+        public IActionResult Page27()
+        {
+            return View();
+        }
 
+        public IActionResult Traffic()
+        {
+            return View();
+        }
+        public IActionResult Signs()
+        {
+            return View();
+        }
+        public IActionResult Trans()
+        {
+            return View();
+        }
         #endregion
     }
 }
