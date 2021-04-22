@@ -79,7 +79,6 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page6.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page7.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page8.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\MVC1.csprojAssemblyReference.cache
-D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Test.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TestLayout.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page10.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page11.cshtml.g.cs
@@ -103,3 +102,5 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page9.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Traffic.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Signs.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Trans.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contacts.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\OperationWithTests.cshtml.g.cs
