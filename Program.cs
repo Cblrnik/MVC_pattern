@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Data.Common;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -18,7 +21,7 @@ namespace MVC1
 
                 try
                 {
-                    var context = services.GetRequiredService<MobileContext>();
+                    var context = services.GetRequiredService<TestContext>();
                     SampleData.Initialize(context);
                 }
                 catch (Exception ex)

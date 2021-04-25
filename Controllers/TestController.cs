@@ -9,10 +9,11 @@ namespace MVC1.Controllers
 {
     public class TestController : Controller
     {
-        MobileContext db;
-        public TestController(MobileContext context)
+        TestContext db;
+
+        public TestController(TestContext context)
         {
-            db = context;
+            this.db = context;
         }
 
         public IActionResult OperationWithTests()
@@ -20,24 +21,33 @@ namespace MVC1.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Buy(int? id)
+        public IActionResult Test()
         {
-            if (id == null) return RedirectToAction("Index");
-            ViewBag.PhoneId = id;
-            return View();
-        }
-        [HttpPost]
-        public string Buy(Order order)
-        {
-            db.Orders.Add(order);
-            // сохраняем в бд все изменения
-            db.SaveChanges();
-            return "Спасибо, " + order.User + ", за покупку!";
+            List<Question> questions = new List<Question>();
+            questions = db.Question.ToList();
+            List<Answer> answers = db.Answers.ToList();
+            for (int i = 0; i < questions.Count; i++)
+            {
+                if (questions[i].answers is null)
+                {
+                    questions[i].answers = new List<Answer>();
+                    for (int j = 0; j < answers.Count; j++)
+                    {
+                        if (answers[j].idQuestion == questions[i].Id)
+                        {
+                            questions[i].answers.Add(answers[j]);
+                        }
+                    }
+                }
+            }
+
+            return View(questions);
         }
 
-        public IActionResult Index()
+        [HttpPost]
+        public IActionResult Test(Result result)
         {
+
             return View();
         }
     }

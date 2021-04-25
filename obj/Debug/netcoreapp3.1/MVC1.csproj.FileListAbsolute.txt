@@ -69,7 +69,6 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Buy.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\scopedcss\bundle\MVC1.styles.css
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\StartPage.cshtml.g.cs
-D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Index.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page1.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page2.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Page3.cshtml.g.cs
@@ -104,3 +103,4 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Signs.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Trans.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contacts.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\OperationWithTests.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\Test.cshtml.g.cs

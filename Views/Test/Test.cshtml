@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MVC1.Models.Question>
+@{ Layout = "~/Views/Shared/_TestLayout.cshtml";
+   ViewData["Title"] = "PDD online";
+}
+
+<h1 style="display: flex; justify-content: center;">Тестовые вопросы для проверки знаний ПДД</h1>
+<form method="post"> 
+    @foreach (var question in Model)
+    {
+        <div class="block">
+            <div class="question">
+                @question.numberOfQuestion
+                @question.textOfQuestion<hr />
+            </div>
+            <div class="answers">
+                @for (int i = 0; i < question.answers.Count; i++)
+                {
+                    <input type="radio" name="answer" value="@question.answers[i].isCorrect" /> @question.answers[i].textOfAnswer<br />
+                }
+            </div>
+            <br />
+        </div>
+    }
+    <br /><br />
+    <p><input type="submit">Посмотреть результаты</p>
+</form>

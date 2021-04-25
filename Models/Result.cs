@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace MVC1.Models
 {
-    public class Phone
+    public class Result
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Company { get; set; }
-        public int Price { get; set; }
+        public Question question { get; set; }
+        public bool answer1 {get;set;}
     }
 }

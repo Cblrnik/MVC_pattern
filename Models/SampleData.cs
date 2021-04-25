@@ -8,30 +8,56 @@ namespace MVC1.Models
 {
     public class SampleData
     {
-        public static void Initialize(MobileContext context)
+        public static void Initialize(TestContext context)
         {
-            if (!context.Phones.Any())
+            if (!context.Question.Any())
             {
-                context.Phones.AddRange(
-                    new Phone
+                context.Question.AddRange(
+                    new Question
                     {
-                        Name = "iPhone X",
-                        Company = "Apple",
-                        Price = 600
+                        textOfQuestion = "Очень важный вопрос",
+                        numberOfQuestion = 1,
+                        typeOfQuestion = 1,
+                        answers = new List<Answer>()
                     },
-                    new Phone
+                    new Question
                     {
-                        Name = "Samsung Galaxy Edge",
-                        Company = "Samsung",
-                        Price = 550
-                    },
-                    new Phone
-                    {
-                        Name = "Pixel 3",
-                        Company = "Google",
-                        Price = 500
+                        textOfQuestion = "Почти очень важный вопрос",
+                        numberOfQuestion = 2,
+                        typeOfQuestion = 2,
+                        answers = new List<Answer>()
                     }
                 );
+                context.SaveChanges();
+            }
+            if (!context.Answers.Any())
+            {
+                context.Answers.AddRange(
+                    new Answer
+                    {
+                        textOfAnswer = "Правильный ответ",
+                        isCorrect = true,
+                        idQuestion = 1
+                    },
+                    new Answer
+                    {
+                        textOfAnswer = "Неправильный ответ",
+                        isCorrect = false,
+                        idQuestion = 1
+                    },
+                    new Answer
+                    {
+                        textOfAnswer = "Правильный ответ",
+                        isCorrect = true,
+                        idQuestion = 2
+                    },
+                    new Answer
+                    {
+                        textOfAnswer = "Неправильный ответ",
+                        isCorrect = false,
+                        idQuestion = 2
+                    }
+                ) ;
                 context.SaveChanges();
             }
         }

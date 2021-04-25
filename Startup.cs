@@ -24,7 +24,7 @@ namespace MVC1
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<MobileContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<TestContext>(options => options.UseSqlServer(connection));
             services.AddMvc();
             services.AddControllersWithViews();
         }
