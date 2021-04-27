@@ -104,3 +104,6 @@ D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\View\Trans.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contacts.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\OperationWithTests.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\Test.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\Result.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\CreateQuestion.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\CreateAnswer.cshtml.g.cs

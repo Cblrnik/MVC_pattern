@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "PDD online";
+}
+
+<h1 style="display: flex; justify-content: center;">Форма для создания ответов</h1>
+<br />
+
+<p style="font-size: 22px; text-decoration:underline;">Текст вопроса:</p><p style="white-space: initial">@ViewBag.Message</p>
+<br />
+<hr />
+<br />
+
+<form method="post" action="~/Test/CreateAnswer">
+    <div>
+        <label for="textOfAnswer">Текст ответа</label><br />
+    </div>
+    <input name="textOfAnswer" type="text" />
+    <div>
+        <br />
+        <label for="isCorrect">Правилен ли ответ</label>
+    </div>
+    <input name="isCorrect" type="checkbox" value="true" />
+    <input name="idQuestion" value="@(ViewBag.Id)" type="hidden" />
+
+    <p><input class="sent" type="submit" value="Отправить"></p>
+</form>
+@if (ViewBag.CanExit)
+{
+    <a href="~/Home/StartPage">К главной странице</a>
+}
+
+

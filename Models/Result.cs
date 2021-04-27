@@ -9,6 +9,6 @@ namespace MVC1.Models
     {
         public int Id { get; set; }
         public Question question { get; set; }
-        public bool answer1 {get;set;}
+        public int points {get;set;}
     }
 }

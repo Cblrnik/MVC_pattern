@@ -25,6 +25,88 @@
         box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
     }
 
+input[type=text] {
+    font-size:20px;
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+}
+
+.resultText {
+    margin-left: 5%;
+    margin-bottom: 3%;
+    font-size: 30px;
+    overflow: hidden;
+    text-shadow: 0 0 tomato, 0 0 yellowgreen, 0 0 skyblue;
+    color: transparent;
+    transition: all 1s;
+}
+
+    .resultText:hover {
+        text-shadow: -400px 0 tomato, 400px 0 yellowgreen, 0 0 skyblue;
+    }
+
+.badResultText {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: 28px;
+    text-shadow: 1px 1px white, 2px 2px #777;
+    color: #333;
+    transition: all 1s;
+}
+
+    .badResultText:hover {
+        text-shadow: 1px 1px white, 2px 2px tomato;
+        color: crimson;
+    }
+
+.anotherButton {
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+    width: 15em;
+    height: 3.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #777;
+    color: #fff;
+    outline: none;
+    border: 2px solid #1a53bc;
+    border-radius: 100px;
+    box-shadow: 0 0 0 60px rgb(0 0 0 / 0%) inset, 0.1em 0.1em 0.2em #02328b;
+    background: linear-gradient(#2e77fd, #9bb7eb 48%, #2e77fd 52%, #003391);
+}
+
+.sent {
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+    width: 11em;
+    height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #777;
+    color: #fff;
+    outline: none;
+    border: 2px solid #1a53bc;
+    border-radius: 100px;
+    box-shadow: 0 0 0 60px rgb(0 0 0 / 0%) inset, 0.1em 0.1em 0.2em #02328b;
+    background: linear-gradient(#2e77fd, #9bb7eb 48%, #2e77fd 52%, #003391);
+}
+
 .testWrapper {
     display: table;
     align-items: center;
@@ -50,6 +132,7 @@
 }
 
 .answers {
+    margin-top: 10px;
     text-decoration: none;
     font-size: 18px;
 }

@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "PDD online";
+}
+
+@if (ViewBag.isPassed)
+{
+    <p class="resultText">@ViewBag.Message</p>
+    <img src="~/images/Passed.jpg" class="result" title="Good Job!"/>
+}
+else
+{
+    <p class="resultText">@ViewBag.Message</p>
+    <p class="badResultText">@ViewBag.CorrectMessage</p>
+    <img src="~/images/failed.jpg" class="result" title="Учи правила!!!!"/>
+}
+<br />
+<a class="anotherButton" href="~/Test/Test">Ответить на ещё один вопрос</a>
