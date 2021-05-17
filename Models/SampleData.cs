@@ -10,6 +10,20 @@ namespace MVC1.Models
     {
         public static void Initialize(TestContext context)
         {
+            if (!context.Administrators.Any())
+            {
+                context.Administrators.Add
+                (
+                    new Administrator
+                    {
+                        Name = "Main Admin",
+                        Login = "Administrator",
+                        Password = "Admin"
+                    }
+                );
+                context.SaveChanges();
+            }
+
             if (!context.Question.Any())
             {
                 context.Question.AddRange(

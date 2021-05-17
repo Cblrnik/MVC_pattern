@@ -5,10 +5,14 @@ using System.Threading.Tasks;
 
 namespace MVC1.Models
 {
-    public class Result
+    public class Administrator
     {
         public int Id { get; set; }
-        public Question question { get; set; }
-        public int points {get;set;}
+
+        public string Name { get; set; }
+
+        public string Login { get; set; }
+
+        public string Password { get; set; }
     }
 }

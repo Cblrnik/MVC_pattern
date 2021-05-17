@@ -28,7 +28,13 @@ namespace MVC1.Controllers
 
                 for (int j = 0; j < answers.Count; j++)
                 {
-                    if (answers[j].idQuestion == questions[i].numberOfQuestion)
+                    if (string.IsNullOrEmpty(answers[j].textOfAnswer) || string.IsNullOrWhiteSpace(answers[j].textOfAnswer))
+                    {
+                        answers.Remove(answers[j]);
+                        db.Answers.Remove(answers[j]);
+                        db.SaveChanges();
+                    } 
+                    else if (answers[j].idQuestion == questions[i].Id)
                     {
                         questions[i].answers.Add(answers[j]);
                     }
@@ -37,6 +43,30 @@ namespace MVC1.Controllers
                 db.SaveChanges();
             }
         }
+        
+        [HttpPost]
+        public IActionResult ChangeQuestion(int admin, int questionId, int numberOfQuestion, string textOfQuestion)
+        {
+            Question que = db.Question.Where(x => x.Id == questionId).FirstOrDefault();
+            que.numberOfQuestion = numberOfQuestion;
+            que.textOfQuestion = textOfQuestion;
+            db.SaveChanges();
+            return RedirectToAction("EditQuest", "Home", new { admin = admin, Id = questionId });
+        }
+
+        [HttpGet]
+        public IActionResult ChangeAnswers(int admin, int questionId, List<string> textOfAnswers)
+        {
+            Answer[] answers = db.Answers.Where(x => x.idQuestion == questionId).Select(x => x).ToArray();
+            for (int i = 0; i < answers.Length; i++)
+            {
+                answers[i].textOfAnswer = textOfAnswers[i];
+            }
+
+            db.SaveChanges();
+            return RedirectToAction("AdminPanel", "Home", new { admin = admin});
+        }
+
 
         public IActionResult OperationWithTests()
         {
@@ -45,6 +75,16 @@ namespace MVC1.Controllers
 
         public IActionResult Test()
         {
+            for (int i = 0; i < questions.Count; i++)
+            {
+                if (questions[i].answers is null || questions[i].answers.Count < 2 || string.IsNullOrEmpty(questions[i].textOfQuestion) || string.IsNullOrWhiteSpace(questions[i].textOfQuestion))
+                {
+                    db.Question.Remove(questions[i]);
+                    db.SaveChanges();
+                    questions.Remove(questions[i]);
+                }
+            }
+
             Random r = new Random();
             int index = r.Next(0, questions.Count);
             return View(questions[index]);
@@ -52,18 +92,18 @@ namespace MVC1.Controllers
 
         public IActionResult CreateQuestion()
         {
-            ViewBag.Id = questions.Count;
+            ViewBag.Id = questions[^1].Id + 1;
             return View();
         }
 
         [HttpPost]
         public IActionResult CreateAnswer(Answer answer)
         {
-            ViewBag.CanExit = true;
-            ViewBag.Id = questions.Count;
-            ViewBag.Message = questions.Find(x => x.numberOfQuestion == questions.Count).textOfQuestion;
             db.Answers.Add(answer);
             db.SaveChanges();
+            ViewBag.CanExit = true;
+            ViewBag.Id = answer.idQuestion;
+            ViewBag.Message = questions.Find(x => x.numberOfQuestion == answer.idQuestion).textOfQuestion;
             return View();
         }
 
@@ -71,6 +111,10 @@ namespace MVC1.Controllers
         public IActionResult CreateAnswer(Question question)
         {
             ViewBag.CanExit = false;
+            if (string.IsNullOrEmpty(question.textOfQuestion) || string.IsNullOrWhiteSpace(question.textOfQuestion))
+            {
+                return RedirectToAction("CreateQuestion", "Test");
+            }
             db.Question.Add(question);
             db.SaveChanges();
             ViewBag.Id = question.numberOfQuestion;
