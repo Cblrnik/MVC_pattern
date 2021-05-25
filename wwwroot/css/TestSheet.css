@@ -19,6 +19,16 @@
     background: linear-gradient(#2e77fd, #9bb7eb 48%, #2e77fd 52%, #003391);
 }
 
+.question-panel {
+    display: flex;
+    align-items: center;
+    margin: 2% 10% 0 10%;
+    background-color: #f6f64fab;
+    min-height: 100px;
+    justify-content: center;
+    border-radius: 100px;
+}
+
     a.selectButton:active {
         top: .1em;
         left: .1em;
@@ -84,9 +94,7 @@ input[type=text] {
 }
 
 .sent {
-    margin-left: 20%;
-    margin-right: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
     position: relative;
     display: flex;
     align-items: center;
@@ -119,12 +127,12 @@ input[type=text] {
     display: block;
     vertical-align: middle;
     align-items: center;
-    margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 10%;
+    margin-top: 2%;
 }
 
 .question {
+    padding-left: 50px;
+    padding-right: 50px;
     display: table;
     align-items: center;
     justify-content: center;
@@ -132,6 +140,8 @@ input[type=text] {
 }
 
 .answers {
+    padding-left: 50px;
+    padding-right: 50px;
     margin-top: 10px;
     text-decoration: none;
     font-size: 18px;

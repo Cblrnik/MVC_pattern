@@ -8,6 +8,7 @@ namespace MVC1.Models
     public class Сortege
     {
         public int idOfQuestion { get; set; }
+        public int numberOfQuestion { get; set; }
         public bool isCorrect { get; set; }
     }
 }

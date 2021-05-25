@@ -16,12 +16,21 @@
         <label for="textOfAnswer">Текст ответа</label><br />
     </div>
     <input name="textOfAnswer" type="text" />
-    <div>
-        <br />
-        <label for="isCorrect">Правилен ли ответ</label>
-    </div>
-    <input name="isCorrect" type="checkbox" value="true" />
-    <input name="idQuestion" value="@(ViewBag.Id)" type="hidden" />
+    @if (ViewBag.a == 0)
+    {
+        <div>
+            <br />
+            <label for="isCorrect">Правилен ли ответ</label>
+        </div>
+        <input name="isCorrect" type="checkbox" value="true" />
+        <input name="idQuestion" value="@(ViewBag.Id)" type="hidden" />
+    }
+    else
+    {
+        <input name="isCorrect" type="hidden" value="false" />
+        <input name="idQuestion" value="@(ViewBag.Id)" type="hidden" />
+        <input name="check" value="@(ViewBag.a)" type="hidden" />
+    }
 
     <p><input class="sent" type="submit" value="Отправить"></p>
 </form>

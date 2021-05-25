@@ -86,8 +86,36 @@ namespace MVC1.Controllers
             }
 
             Random r = new Random();
-            int index = r.Next(0, questions.Count);
-            return View(questions[index]);
+
+            int temp = questions.Count / 2;
+            if (temp > 10)
+            {
+                temp = 10;
+            }
+
+            int[] numbersOfQuestions = new int[temp];
+            int[] IdsOfQuestions = new int[temp];
+            for (int i = 0; i < numbersOfQuestions.Length; i++)
+            {
+                numbersOfQuestions[i] = -1;
+            }
+
+            int k = 0;
+            while (k < temp)
+            {
+                int index = r.Next(0, questions.Count);
+                if (!numbersOfQuestions.Contains(index))
+                {
+                    numbersOfQuestions[k] = index;
+                    IdsOfQuestions[k] = questions[index].Id;
+                    questions[index].numberOfQuestion = k + 1;
+                    k++;
+                }
+            }
+
+            ViewBag.Number = 1;
+            TestNumbers test = new TestNumbers(IdsOfQuestions[1..], questions[numbersOfQuestions[0]]);
+            return View(test);
         }
 
         public IActionResult CreateQuestion()
@@ -97,12 +125,20 @@ namespace MVC1.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateAnswer(Answer answer)
+        public IActionResult CreateAnswer(Answer answer, int check)
         {
             db.Answers.Add(answer);
             db.SaveChanges();
             ViewBag.CanExit = true;
             ViewBag.Id = answer.idQuestion;
+            if (answer.isCorrect)
+            {
+                ViewBag.a = 1;
+            }
+            else
+            {
+                ViewBag.a = check;
+            }
             ViewBag.Message = questions.Find(x => x.numberOfQuestion == answer.idQuestion).textOfQuestion;
             return View();
         }
@@ -119,6 +155,39 @@ namespace MVC1.Controllers
             db.SaveChanges();
             ViewBag.Id = question.numberOfQuestion;
             ViewBag.Message = question.textOfQuestion;
+            ViewBag.a = 0;
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ResultAndNext(List<int> Ids, Сortege cor)
+        {
+            if (!cor.isCorrect)
+            {
+                return RedirectToAction("Result", "Test", new { number = cor.idOfQuestion});
+            }
+
+            Question q = questions.Where(x => x.Id == Ids[0]).FirstOrDefault();
+            q.numberOfQuestion = cor.numberOfQuestion + 1;
+
+            TestNumbers test = new TestNumbers(Ids.ToArray()[1..], q);
+            return View(test);
+        }
+
+        public IActionResult Result(int number)
+        {
+            Question q = questions.Find(x => x.Id == number);
+
+            for (int i = 0; i < q.answers.Count; i++)
+            {
+                if (q.answers[i].isCorrect)
+                {
+                    ViewBag.isPassed = false;
+                    ViewBag.Message = "Ваш ответ не верен.";
+                    ViewBag.CorrectMessage = "Правильный ответ: " + q.answers[i].textOfAnswer;
+                    break;
+                }
+            }
             return View();
         }
 
@@ -129,7 +198,7 @@ namespace MVC1.Controllers
             if (cor.isCorrect)
             {
                 ViewBag.isPassed = true;
-                ViewBag.Message =  "Ваш ответ на вопроc верен";
+                ViewBag.Message =  "Ваши ответы на вопроcы верны";
             }
             else
             {

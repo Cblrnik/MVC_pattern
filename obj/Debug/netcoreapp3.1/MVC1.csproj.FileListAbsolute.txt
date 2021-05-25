@@ -183,3 +183,4 @@ D:\Projects\C#\MVC1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Works
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Auth.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\AdminPanel.cshtml.g.cs
 D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditQuest.cshtml.g.cs
+D:\Projects\C#\MVC1\obj\Debug\netcoreapp3.1\Razor\Views\Test\ResultAndNext.cshtml.g.cs

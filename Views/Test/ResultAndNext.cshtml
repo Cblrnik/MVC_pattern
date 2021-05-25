@@ -3,8 +3,8 @@
     ViewData["Title"] = "PDD online";
 }
 
-<h1 style="display: flex; justify-content: center;">Тестовые вопросы для проверки знаний ПДД</h1>
-@{ 
+<h1 style="display: flex; justify-content: center;">Тестовые вопросы для проверки знаний ПДД</h1>@Model.IdsOfQuestions.Length
+@{
     MVC1.Models.Question question = @Model.Question;
 
 
@@ -37,7 +37,7 @@
                 </div>
                 @if (Model.IdsOfQuestions.Length == 0)
                 {
-                    <p style="display:flex;align-items:center;justify-content: center;"><input action="~/Test/Result" class="sent" type="submit" value="Отправить"></p>
+                    <p style="display:flex;align-items:center;justify-content: center;"><input formaction="~/Test/Result" class="sent" type="submit" value="Закончить тест"></p>
                 }
                 else
                 {
@@ -46,4 +46,5 @@
             </div>
         </div>
     </form>
-    }
+}
+

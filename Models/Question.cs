@@ -10,7 +10,7 @@ namespace MVC1.Models
         public int Id { get; set; }
         public int numberOfQuestion { get; set; }
         public string textOfQuestion { get; set; }
-        public int typeOfQuestion { get; set; }
+        public string chapter { get; set; }
         public List<Answer> answers { get; set; }
     }
 }
