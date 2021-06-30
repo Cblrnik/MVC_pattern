@@ -24,8 +24,9 @@ namespace MVC1
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<MobileContext>(options => options.UseSqlServer(connection));
-            services.AddMvc();//AddControllersWithViews
+            services.AddDbContext<TestContext>(options => options.UseSqlServer(connection));
+            services.AddMvc();
+            services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -33,13 +34,17 @@ namespace MVC1
             app.UseRouting();
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
                             {
                                 endpoints.MapControllerRoute(
-                                  name: "default", 
-                                  pattern: "{controller=Home}/{action=Index}/{id?}");
+                                  name: "default",
+                                  pattern: "{controller=Home}/{action=StartPage}/{id?}");
                             });
-
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("404 | Page is not Found");
+            });
         }
     }
 }

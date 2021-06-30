@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "PDD online";
+}
+
+<h1 style="display: flex; justify-content: center;">Форма для создания теста</h1>
+<form method="get" action="~/Test/CreateAnswer" style="margin: 5%;">
+    <input name="numberOfQuestion" value="@(ViewBag.Id)" type="hidden" />
+    <input name="typeOfQuestion" type="hidden" value="1" />
+    <div>
+        <label for="textOfQuestion">Текст вопроса</label>
+    </div>
+    <input name="textOfQuestion" type="text" />
+    <p><input class="sent" type="submit" value="Отправить" /></p>
+</form>
+

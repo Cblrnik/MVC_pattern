@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/png" href="https://localhost:44382/images/PDD.png" />
+    <link rel="stylesheet" href="~/css/AdminSheet.css" />
+    <link rel="stylesheet" href="~/css/MainSheet.css" />
+    <link rel="stylesheet" href="~/css/MenuSheet.css" />
+    <link rel="stylesheet" href="~/css/TextSheet.css" />
+    <link rel="stylesheet" href="~/css/TestSheet.css" />
+</head>
+<body>
+    <!--меню-->
+    <nav>
+        <div class="wrapper">
+            <div>
+                <a href="~/Home/StartPage"><img src="https://localhost:44382/images/PDD.png" alt=""></a>
+                <span class="logo">Online</span>
+            </div>
+            <div class="menu">
+                <a href="~/Home/StartPage" class="menu-item">Главная</a>
+                <a href="~/View/Page1" class="menu-item">ПДД</a>
+                <a href="~/Test/OperationWithTests" class="menu-item">Тесты</a>
+                <a href="~/Home/Contacts" class="menu-item">Контакты</a>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="testWrapper">
+        <div class="content">
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="footer-text">
+                <img src="https://localhost:44382/images/PDD.png" alt="">
+            </div>
+            <div class="socials">
+                <a target="_blank" href="https://vk.com/cblrnik"><img class="VK" src="https://localhost:44382/images/vk.png" alt=""></a>
+                <a href="#"><img src="https://localhost:44382/images/twitter.png" alt=""></a>
+                <a href="~/Home/Auth"><img src="https://localhost:44382/images/rss.png" alt=""></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

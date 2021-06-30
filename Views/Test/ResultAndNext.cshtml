@@ -1,0 +1,50 @@
+﻿@model MVC1.Models.TestNumbers
+@{ Layout = "~/Views/Shared/_TestLayout.cshtml";
+    ViewData["Title"] = "PDD online";
+}
+
+<h1 style="display: flex; justify-content: center;">Тестовые вопросы для проверки знаний ПДД</h1>@Model.IdsOfQuestions.Length
+@{
+    MVC1.Models.Question question = @Model.Question;
+
+
+    <form method="post" action="~/Test/ResultAndNext">
+        @for (int i = 0; i < Model.IdsOfQuestions.Length; i++)
+        {
+            <input name="Ids" value="@Model.IdsOfQuestions[i]" type="hidden" />
+        }
+
+        <div class="question-panel">
+            <div class="block">
+                <div class="question">
+                    <input name="idOfQuestion" value="@question.Id" type="hidden" />
+                    <input name="numberOfQuestion" value="@question.numberOfQuestion" type="hidden" />
+                    @question.numberOfQuestion
+                    @question.textOfQuestion<hr />
+                </div>
+                <div class="answers">
+                    @for (int i = 0; i < question.answers.Count; i++)
+                    {
+                        @if (question.answers[i].isCorrect)
+                        {
+                            <input type="radio" name="isCorrect" value="true" /> @question.answers[i].textOfAnswer<br />
+                        }
+                        else
+                        {
+                            <input type="radio" name="isCorrect" value="false" /> @question.answers[i].textOfAnswer<br />
+                        }
+                    }
+                </div>
+                @if (Model.IdsOfQuestions.Length == 0)
+                {
+                    <p style="display:flex;align-items:center;justify-content: center;"><input formaction="~/Test/Result" class="sent" type="submit" value="Закончить тест"></p>
+                }
+                else
+                {
+                    <p style="display:flex;align-items:center;justify-content: center;"><input class="sent" type="submit" value="Отправить"></p>
+                }
+            </div>
+        </div>
+    </form>
+}
+

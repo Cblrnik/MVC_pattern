@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVC1.Models.Question>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = ViewBag.Name;
+}
+@foreach (var item in Model)
+{
+    <div class="panel">
+        <div style="display:block; justify-content:space-around">
+            <div class="text-inside">
+
+                <p><span class="text-admin">@item.numberOfQuestion</span>. <span class="text-admin">@item.textOfQuestion</span></p><hr />
+
+                @for (int i = 0; i < item.answers.Count; i++)
+                {
+                    <p><span class="text-admin">@(i+1)</span> <span class="text-admin">@item.answers[i].textOfAnswer</span> <input type="radio" name="@item.answers[i].idQuestion" value="@item.answers[i].isCorrect" checked="@item.answers[i].isCorrect" /></p>
+                }
+            </div>
+            <form id="@item.Id">
+                <input type="hidden" name="admin" value="@ViewBag.Id" />
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <button type="submit" name="id" form="@item.Id" class="login100-form-btn" formaction="~/Home/DeleteQuestion" value="@item.Id">Удалить</button>
+                </div>
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <button type="submit" name="id" form="@item.Id" class="login100-form-btn" formaction="~/Home/EditQuestion" value="@item.Id">Редактировать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+}

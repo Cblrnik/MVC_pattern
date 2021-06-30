@@ -1,0 +1,61 @@
+﻿@model MVC1.Models.Question
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = ViewBag.Name;
+}
+<div class="panel">
+    <form method="post" id="forma" action="~/Test/ChangeQuestion">
+        <input type="hidden" value="@ViewBag.Id" name="admin" />
+        <input type="hidden" value="@ViewBag.IdOfQuestion" name="questionId" />
+        <div>
+            <label for="numberOfAnswer">Номер вопроса</label><br />
+        </div>
+        <input type="text" name="numberOfQuestion" value="@Model.numberOfQuestion" />
+        <div>
+            <label for="textOfAnswer">Текст вопроса</label><br />
+        </div>
+        <input type="text" name="textOfQuestion" value="@Model.textOfQuestion" />
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button type="submit" form="forma" class="login100-form-btn" formaction="~/Test/ChangeQuestion">Сохранить изменения</button>
+        </div>
+    </form>
+</div>
+
+<div class="panel-ans">
+    <form method="get" id="forma1" action="~/Test/ChangeAnswers">
+        <input type="hidden" value="@ViewBag.Id" name="admin" />
+        <input type="hidden" value="@ViewBag.IdOfQuestion" name="questionId" />
+        @for (int i = 0; i < Model.answers.Count; i++)
+        {
+            if (@Model.answers[i].isCorrect)
+            {
+                <div>
+                    <label style="color:green" ; for="[@i]">Правильный ответ на вопрос </label><br />
+                </div>
+            }
+            else
+            {
+                <div>
+                    <label for="[@i]">Ответ на вопрос </label><br />
+                </div>
+            }
+            <input type="text" name="[@i]" value="@Model.answers[i].textOfAnswer" />
+        }
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button type="submit" form="forma1" class="login100-form-btn" formaction="~/Test/ChangeAnswers">Сохранить изменения</button>
+        </div>
+    </form>
+</div>
+
+<div style="margin-top: 20px; ">
+    <form method="get" id="forma2" action="~/Test/ChangeAnswers">
+        <input type="hidden" value="@ViewBag.Id" name="admin" />
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button type="submit" form="forma2" class="login100-form-btn" action="~/Test/AdminPanel">Назад</button>
+        </div>
+    </form>
+</div>
+

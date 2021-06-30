@@ -4,26 +4,82 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="icon" type="image/png" href="https://localhost:44382/images/PDD.png" />
+    <link rel="stylesheet" href="~/css/MainSheet.css" />
+    <link rel="stylesheet" href="~/css/MenuSheet.css" />
+    <link rel="stylesheet" href="~/css/TextSheet.css" />
+    <link rel="stylesheet" href="~/css/TestSheet.css" />
 </head>
 <body>
     <!--меню-->
-    <nav class="navbar navbar-inverse">
-        <div class="container">
+    <nav>
+        <div class="wrapper">
             <div>
-                <ul class="nav navbar-nav">
-                    <li><a href="~/Home/Index" class="navbar-brand">Главная</a></li>
-                </ul>
+                <a href="~/Home/StartPage"><img src="https://localhost:44382/images/PDD.png" alt=""></a>
+                <span class="logo">Online</span>
+            </div>
+            <div class="menu">
+                <a href="~/Home/StartPage" class="menu-item">Главная</a>
+                <a href="~/View/Page1" class="menu-item">ПДД</a>
+                <a href="~/Test/OperationWithTests" class="menu-item">Тесты</a>
+                <a href="~/Home/Contacts" class="menu-item">Контакты</a>
             </div>
         </div>
     </nav>
-    <!--основной контент-->
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>© 2015 - MobileStore</p>
-        </footer>
+    <hr>
+    <div class="menu-content">
+        <div class="vertical-menu">
+            <ul class="metro">
+                <li class="dropdown">
+                    <a href="">Правила дорожного движения</a>
+                    <ul class="dropdown-child">
+                        <li><a href="~/View/Page1">1. Общие положения</a></li>
+                        <li><a href="~/View/Page2">2. Общие права и обязанности участников дорожного движения</a></li>
+                        <li><a href="~/View/Page3">3. Права и обязанности водителей</a></li>
+                        <li><a href="~/View/Page4">4. Права и обязанности пешеходов</a></li>
+                        <li><a href="~/View/Page5">5. Обязанности пассажиров</a></li>
+                        <li><a href="~/View/Page6">6. Права и обязанности водителей и других лиц в особых случаях</a></li>
+                        <li><a href="~/View/Page7">7. Сигналы регулировщика и светофоров</a></li>
+                        <li><a href="~/View/Page8">8. Применение аварийной световой сигнализации, знака аварийной остановки, фонаря с мигающим красным светом</a></li>
+                        <li><a href="~/View/Page9">9. Маневрирование</a></li>
+                        <li><a href="~/View/Page10">10. Расположение транспортных средств на проезжей части дороги</a></li>
+                        <li><a href="~/View/Page11">11. Скорость движения транспортных средств</a></li>
+                        <li><a href="~/View/Page12">12. Обгон, встречный разъезд</a></li>
+                        <li><a href="~/View/Page13">13. Проезд перекрестков</a></li>
+                        <li><a href="~/View/Page14">14. Пешеходные переходы и остановочные пункты маршрутных транспортных средств</a></li>
+                        <li><a href="~/View/Page15">15. Преимущество маршрутных транспортных средств</a></li>
+                        <li><a href="~/View/Page16">16. Железнодорожные переезды</a></li>
+                        <li><a href="~/View/Page17">17. Движение по автомагистрали</a></li>
+                        <li><a href="~/View/Page18">18. Движение в жилой и пешеходной зонах, на прилегающей территории</a></li>
+                        <li><a href="~/View/Page19">19. Остановка и стоянка транспортных средств</a></li>
+                        <li><a href="~/View/Page20">20. Движение на велосипедах и мопедах</a></li>
+                        <li><a href="~/View/Page21">21. Движение гужевых транспортных средств, всадников и прогон скота</a></li>
+                        <li><a href="~/View/Page22">22. Пользование внешними световыми приборами и звуковыми сигналами транспортных средств</a></li>
+                        <li><a href="~/View/Page23">23. Перевозка пассажиров</a></li>
+                        <li><a href="~/View/Page24">24. Перевозка грузов</a></li>
+                        <li><a href="~/View/Page25">25. Буксировка механических транспортных средств</a></li>
+                        <li><a href="~/View/Page26">26. Основные положения о допуске транспортных средств к участию в дорожном движении, их техническое состояние, оборудование</a></li>
+                        <li><a href="~/View/Page27">27. Обязанности должностных и иных лиц по обеспечению безопасности дорожного движения</a></li>
+                    </ul>
+                </li>
+                <li><a href="~/View/Traffic">Приложение 1. Дорожные светофоры</a></li>
+                <li><a href="~/View/Signs">Приложение 2. Дорожные знаки</a></li>
+                <li><a href="~/View/Trans">Приложение 3. Опозновательные знаки транспортных средств</a></li>
+            </ul>
+        </div>
+        <div class="text">
+            @RenderBody()
+        </div>
     </div>
+    <footer>
+        <div class="footer-text">
+            <img src="https://localhost:44382/images/PDD.png" alt="">
+        </div>
+        <div class="socials">
+            <a  target="_blank" href="https://vk.com/cblrnik"><img class ="VK" src="https://localhost:44382/images/vk.png" alt=""></a>
+            <a href="#"><img src="https://localhost:44382/images/twitter.png" alt=""></a>
+            <a href="~/Home/Auth"><img src="https://localhost:44382/images/rss.png" alt=""></a>
+        </div>
+    </footer>
 </body>
 </html>

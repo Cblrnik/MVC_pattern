@@ -1,0 +1,96 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+.logo {
+    color: black;
+    font-size: 24px;
+}
+
+nav {
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+    nav .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav img {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+.menu {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.menu-item {
+    padding: 30px 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #626262;
+    transition: all .3s linear;
+}
+
+    .menu-item:hover {
+        background: #2e77fd;
+        color: white;
+    }
+
+.result{
+    margin-left: 2%;
+    max-height: 500px;
+    max-width:1000px
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    color: #9d9d9d;
+}
+
+.cart-price {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 0 15px 0 10px;
+}
+
+footer {
+    display: flex;
+    margin-top: 105px;
+    padding: 25px 10px;
+    background: #1b2330;
+    justify-content: space-between;
+}
+
+.copy {
+    margin-top: 15px;
+    color: #767b83;
+    font-size: 16px;
+}
+
+.socials img {
+    padding: 0 20px;
+    height: 32px;
+}
